@@ -1,0 +1,956 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EzAssign Insights | Business, Education & Academic PR Publication</title>
+    <meta name="description" content="Leading editorial publication on UK higher education, global business strategy, research methodology, and academic insights by EzAssign.">
+    <meta name="keywords" content="Blog, PR, Marketing, Ads, Article, Academic Research, Higher Education, UK Universities, EzAssign, Coursework Guidance">
+
+    <!-- Tailwind CSS with Custom Brand Extensions -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            50: '#fff7f5',
+                            100: '#ffeee8',
+                            200: '#ffdcd1',
+                            500: '#f05a28',
+                            600: '#e04716',
+                            700: '#c43407',
+                            800: '#9e2c0b',
+                            900: '#111827',
+                            accent: '#f95721'
+                        },
+                        sitebg: '#fbfbfb'
+                    },
+                    fontFamily: {
+                        sans: ['Plus Jakarta Sans', 'Inter', '-apple-system', 'BlinkMacSystemFont', 'sans-serif'],
+                        serif: ['Newsreader', 'Georgia', 'serif']
+                    },
+                    boxShadow: {
+                        'card-hover': '0 20px 30px -10px rgba(240, 90, 40, 0.08), 0 10px 15px -5px rgba(0, 0, 0, 0.04)',
+                        'glow': '0 0 25px rgba(240, 90, 40, 0.25)'
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Google Fonts & FontAwesome Icons -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- SEO JSON-LD Structured Data Schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "NewsMediaOrganization",
+      "name": "EzAssign Media & Editorial Insights",
+      "url": "https://ezassign.uk/",
+      "logo": "https://ezassign.uk/logo.png",
+      "sameAs": [
+        "https://www.instagram.com/ezassign",
+        "https://www.linkedin.com/company/ezassign"
+      ],
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "telephone": "+91-8742818004",
+        "contactType": "customer service",
+        "email": "EzAssignglobal@gmail.com",
+        "areaServed": ["GB", "IN", "Global"],
+        "availableLanguage": ["English"]
+      },
+      "description": "Global business, higher education, and academic strategy insights publication indirectly supporting UK international students."
+    }
+    </script>
+
+    <style>
+        body {
+            background-color: #fbfbfb;
+            color: #111827;
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            -webkit-font-smoothing: antialiased;
+        }
+        .serif-text {
+            font-family: 'Newsreader', Georgia, serif;
+        }
+        .badge-pill {
+            transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        .badge-pill:hover {
+            transform: translateY(-1.5px);
+        }
+        ::-webkit-scrollbar {
+            width: 6px;
+            height: 6px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #f1f1f1;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #d1d5db;
+            border-radius: 9999px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #f05a28;
+        }
+        .img-zoom {
+            transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        .card-container:hover .img-zoom {
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+<body class="min-h-screen flex flex-col justify-between selection:bg-brand-500 selection:text-white">
+
+    <!-- TOP HEADER -->
+    <header class="sticky top-0 z-40 bg-white/95 backdrop-blur-md border-b border-gray-200/80 transition-all shadow-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+
+            <!-- LOGO (Written EzAssign Logo in Orange) -->
+            <a href="#" onclick="showSection('home')" class="flex items-center space-x-2 group" title="EzAssign Insights">
+                <div class="flex flex-col">
+                    <span class="text-2xl font-black tracking-tight text-brand-500 group-hover:text-brand-600 transition-colors leading-none">
+                        EzAssign
+                    </span>
+                    <span class="text-[9px] font-bold text-gray-400 uppercase tracking-widest mt-1">
+                        EDITORIAL & PR
+                    </span>
+                </div>
+            </a>
+
+            <!-- NAVIGATION LINKS -->
+            <nav class="hidden md:flex items-center space-x-8 text-sm font-semibold text-gray-700">
+                <a href="https://ezassign.uk/" target="_blank" rel="noopener noreferrer" class="hover:text-brand-500 transition-colors flex items-center space-x-1.5 group">
+                    <span>Websites</span>
+                    <i class="fa-solid fa-arrow-up-right-from-square text-[10px] text-gray-400 group-hover:text-brand-500 transition-colors"></i>
+                </a>
+                <button onclick="showSection('profiles')" class="nav-link-btn hover:text-brand-500 transition-colors py-1" id="nav-profiles">
+                    Profiles
+                </button>
+                <button onclick="showSection('news')" class="nav-link-btn hover:text-brand-500 transition-colors py-1" id="nav-news">
+                    Latest News
+                </button>
+                <button onclick="showSection('pr')" class="nav-link-btn hover:text-brand-500 transition-colors py-1" id="nav-pr">
+                    PR & Submissions
+                </button>
+            </nav>
+
+            <!-- RIGHT ACTIONS -->
+            <div class="flex items-center space-x-4">
+                <button onclick="toggleSearchModal()" class="p-2.5 text-gray-500 hover:text-brand-500 rounded-full hover:bg-brand-50 transition-colors" title="Search Articles">
+                    <i class="fa-solid fa-magnifying-glass text-sm"></i>
+                </button>
+
+                <button onclick="openAdminModal()" class="badge-pill bg-gray-900 hover:bg-brand-500 text-white text-xs font-bold px-4 py-2.5 rounded-full flex items-center space-x-2 shadow-sm">
+                    <i class="fa-solid fa-user-shield text-[11px]"></i>
+                    <span id="admin-pill-text">Admin Portal</span>
+                </button>
+
+                <button onclick="toggleMobileMenu()" class="md:hidden p-2 text-gray-700 hover:text-brand-500 focus:outline-none">
+                    <i class="fa-solid fa-bars text-xl"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Navigation Menu -->
+        <div id="mobile-menu" class="hidden md:hidden border-b border-gray-200 bg-white px-6 py-4 space-y-3 shadow-lg">
+            <a href="https://ezassign.uk/" target="_blank" class="block text-sm font-semibold text-gray-800 hover:text-brand-500">
+                Websites <i class="fa-solid fa-arrow-up-right-from-square text-xs ml-1 text-gray-400"></i>
+            </a>
+            <button onclick="showSection('profiles'); toggleMobileMenu()" class="block text-left w-full text-sm font-semibold text-gray-800 hover:text-brand-500">Profiles</button>
+            <button onclick="showSection('news'); toggleMobileMenu()" class="block text-left w-full text-sm font-semibold text-gray-800 hover:text-brand-500">Latest News</button>
+            <button onclick="showSection('pr'); toggleMobileMenu()" class="block text-left w-full text-sm font-semibold text-gray-800 hover:text-brand-500">PR & Submissions</button>
+        </div>
+    </header>
+
+    <!-- SEARCH OVERLAY MODAL -->
+    <div id="search-modal" class="fixed inset-0 bg-gray-900/60 backdrop-blur-sm z-50 hidden flex items-start justify-center pt-20 px-4">
+        <div class="bg-white rounded-3xl max-w-2xl w-full p-6 shadow-2xl border border-gray-100">
+            <div class="flex items-center justify-between pb-4 border-b border-gray-100">
+                <div class="flex items-center space-x-3 flex-1 mr-4">
+                    <i class="fa-solid fa-magnifying-glass text-brand-500"></i>
+                    <input type="text" id="modal-search-input" onkeyup="handleSearch(this.value)" placeholder="Search articles, business topics, academic strategy..." class="w-full text-base focus:outline-none text-gray-900 placeholder-gray-400">
+                </div>
+                <button onclick="toggleSearchModal()" class="text-gray-400 hover:text-black p-1 rounded-full hover:bg-gray-100">
+                    <i class="fa-solid fa-xmark text-lg"></i>
+                </button>
+            </div>
+            <div id="search-results" class="mt-4 max-h-96 overflow-y-auto space-y-3 divide-y divide-gray-50">
+                <p class="text-xs text-gray-400 py-4 text-center">Type keyword to search published articles...</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- ADMIN SIGN IN MODAL -->
+    <div id="admin-modal" class="fixed inset-0 bg-gray-900/60 backdrop-blur-sm z-50 hidden flex items-center justify-center p-4">
+        <div class="bg-white rounded-3xl max-w-md w-full p-8 shadow-2xl border border-gray-100 space-y-6">
+            <div class="flex items-center justify-between">
+                <div class="flex items-center space-x-3">
+                    <div class="w-10 h-10 rounded-xl bg-brand-50 text-brand-500 flex items-center justify-center font-bold">
+                        <i class="fa-solid fa-lock"></i>
+                    </div>
+                    <div>
+                        <h3 class="font-bold text-gray-900 text-lg">Admin Portal Access</h3>
+                        <p class="text-xs text-gray-500">EzAssign Editorial Management</p>
+                    </div>
+                </div>
+                <button onclick="closeAdminModal()" class="text-gray-400 hover:text-black">
+                    <i class="fa-solid fa-xmark text-lg"></i>
+                </button>
+            </div>
+            <form onsubmit="handleAdminLogin(event)" class="space-y-4">
+                <div>
+                    <label class="block text-xs font-bold text-gray-700 uppercase tracking-wider mb-2">Username / Email</label>
+                    <input type="email" required placeholder="admin@ezassign.uk" class="w-full px-4 py-3 rounded-xl border border-gray-200 text-sm focus:outline-none focus:border-brand-500 focus:ring-1 focus:ring-brand-500">
+                </div>
+                <div>
+                    <label class="block text-xs font-bold text-gray-700 uppercase tracking-wider mb-2">Password</label>
+                    <input type="password" required placeholder="••••••••" class="w-full px-4 py-3 rounded-xl border border-gray-200 text-sm focus:outline-none focus:border-brand-500 focus:ring-1 focus:ring-brand-500">
+                </div>
+                <button type="submit" class="w-full py-3.5 bg-brand-500 hover:bg-brand-600 text-white font-bold rounded-xl text-sm shadow-md shadow-brand-500/20 transition-all">
+                    Sign In to Portal
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <!-- ARTICLE READER MODAL -->
+    <div id="article-modal" class="fixed inset-0 bg-gray-900/70 backdrop-blur-md z-50 hidden flex items-center justify-center p-4 overflow-y-auto">
+        <div class="bg-white rounded-3xl max-w-3xl w-full p-6 sm:p-8 shadow-2xl border border-gray-100 max-h-[90vh] overflow-y-auto relative my-8">
+            <button onclick="closeArticleModal()" class="absolute top-6 right-6 text-gray-400 hover:text-black bg-gray-100 rounded-full w-9 h-9 flex items-center justify-center">
+                <i class="fa-solid fa-xmark text-lg"></i>
+            </button>
+            <div id="article-modal-content">
+                <!-- Dynamically Populated -->
+            </div>
+        </div>
+    </div>
+
+    <!-- MAIN CONTAINER WITH DYNAMIC VIEW SECTIONS -->
+    <main class="flex-grow max-w-7xl w-full mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12">
+
+        <!-- SECTION 1: HOME / EDITORIAL BLOG STREAM -->
+        <section id="section-home" class="space-y-12">
+
+            <!-- HERO HEADING -->
+            <div class="text-center max-w-3xl mx-auto space-y-4 pt-4">
+                <span class="inline-flex items-center space-x-2 px-3 py-1 bg-brand-50 border border-brand-100 text-brand-500 text-xs font-bold rounded-full uppercase tracking-wider">
+                    <span class="w-2 h-2 rounded-full bg-brand-500 animate-pulse"></span>
+                    <span>Editorial Journal & PR Dispatch</span>
+                </span>
+                <h1 class="text-3xl sm:text-5xl font-extrabold tracking-tight text-gray-900 leading-tight">
+                    Business, Education & Academic Leadership
+                </h1>
+                <p class="text-gray-600 text-base sm:text-lg max-w-2xl mx-auto serif-text italic">
+                    Curated perspectives, higher education benchmarks, business innovations, and strategic insights for global scholars.
+                </p>
+            </div>
+
+            <!-- CATEGORY TAG FILTERS -->
+            <div class="flex flex-wrap items-center justify-center gap-2.5 pt-2 pb-6 border-b border-gray-200/80">
+                <span class="text-xs font-bold uppercase tracking-wider text-gray-400 mr-2">Filter:</span>
+                <button onclick="filterCategory('All')" class="category-pill badge-pill text-xs font-semibold px-4 py-2.5 rounded-full border border-gray-900 bg-gray-900 text-white shadow-sm" id="filter-All">All</button>
+                <button onclick="filterCategory('Higher Education')" class="category-pill badge-pill text-xs font-semibold px-4 py-2.5 rounded-full border border-gray-200 bg-white text-gray-700 hover:border-brand-500 hover:text-brand-500" id="filter-Higher Education">Higher Education</button>
+                <button onclick="filterCategory('UK Academics')" class="category-pill badge-pill text-xs font-semibold px-4 py-2.5 rounded-full border border-gray-200 bg-white text-gray-700 hover:border-brand-500 hover:text-brand-500" id="filter-UK Academics">UK Academics</button>
+                <button onclick="filterCategory('Student Strategy')" class="category-pill badge-pill text-xs font-semibold px-4 py-2.5 rounded-full border border-gray-200 bg-white text-gray-700 hover:border-brand-500 hover:text-brand-500" id="filter-Student Strategy">Student Strategy</button>
+                <button onclick="filterCategory('PR & Business')" class="category-pill badge-pill text-xs font-semibold px-4 py-2.5 rounded-full border border-gray-200 bg-white text-gray-700 hover:border-brand-500 hover:text-brand-500" id="filter-PR & Business">PR & Business</button>
+                <button onclick="filterCategory('EdTech')" class="category-pill badge-pill text-xs font-semibold px-4 py-2.5 rounded-full border border-gray-200 bg-white text-gray-700 hover:border-brand-500 hover:text-brand-500" id="filter-EdTech">EdTech</button>
+                <button onclick="filterCategory('Career Guidance')" class="category-pill badge-pill text-xs font-semibold px-4 py-2.5 rounded-full border border-gray-200 bg-white text-gray-700 hover:border-brand-500 hover:text-brand-500" id="filter-Career Guidance">Career Guidance</button>
+            </div>
+
+            <!-- EDITORIAL GRID -->
+            <div id="articles-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Dynamically rendered articles from JS -->
+            </div>
+
+            <!-- PAGINATION -->
+            <div class="flex items-center justify-center pt-8 border-t border-gray-200/80">
+                <div class="inline-flex items-center space-x-2">
+                    <button class="w-10 h-10 rounded-full bg-gray-900 text-white text-xs font-bold flex items-center justify-center shadow-sm">1</button>
+                    <button class="w-10 h-10 rounded-full bg-white text-gray-700 hover:bg-gray-100 text-xs font-semibold flex items-center justify-center border border-gray-200">2</button>
+                    <button class="w-10 h-10 rounded-full bg-white text-gray-700 hover:bg-gray-100 text-xs font-semibold flex items-center justify-center border border-gray-200">3</button>
+                    <span class="text-xs text-gray-400 px-2">...</span>
+                    <button class="w-10 h-10 rounded-full bg-white text-gray-700 hover:bg-gray-100 text-xs font-semibold flex items-center justify-center border border-gray-200"><i class="fa-solid fa-chevron-right text-xs"></i></button>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 2: PROFILES -->
+        <section id="section-profiles" class="hidden space-y-8">
+            <div class="border-b border-gray-200 pb-6">
+                <span class="text-xs font-bold uppercase tracking-widest text-brand-500 flex items-center space-x-2">
+                    <i class="fa-solid fa-building-shield"></i>
+                    <span>Organizational Dossier</span>
+                </span>
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-gray-900 mt-2">EzAssign Profiles & Corporate Blueprint</h2>
+                <p class="text-gray-600 mt-2 max-w-2xl">
+                    Discover how EzAssign empowers over 16,000+ international students across the UK with structural academic guidance, essay blueprints, and research coaching.
+                </p>
+            </div>
+
+            <!-- PROFILES SUB-NAV TABS -->
+            <div class="flex flex-wrap gap-2.5 border-b border-gray-200 pb-4">
+                <button onclick="switchProfileTab('profile-corp')" id="tab-btn-corp" class="profile-tab-btn px-5 py-2.5 text-xs font-bold rounded-xl bg-gray-900 text-white shadow-sm">1. Corporate Profile & Mission</button>
+                <button onclick="switchProfileTab('profile-method')" id="tab-btn-method" class="profile-tab-btn px-5 py-2.5 text-xs font-bold rounded-xl bg-white text-gray-700 border border-gray-200 hover:bg-gray-50">2. Blueprint Methodology</button>
+                <button onclick="switchProfileTab('profile-impact')" id="tab-btn-impact" class="profile-tab-btn px-5 py-2.5 text-xs font-bold rounded-xl bg-white text-gray-700 border border-gray-200 hover:bg-gray-50">3. Global Impact & Metrics</button>
+                <button onclick="switchProfileTab('profile-contact')" id="tab-btn-contact" class="profile-tab-btn px-5 py-2.5 text-xs font-bold rounded-xl bg-white text-gray-700 border border-gray-200 hover:bg-gray-50">4. Institutional Contact</button>
+            </div>
+
+            <!-- TAB 1: CORPORATE PROFILE -->
+            <div id="profile-corp" class="profile-tab-content space-y-6">
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8 items-start">
+                    <div class="md:col-span-2 space-y-5">
+                        <h3 class="text-2xl font-extrabold text-gray-900">About EzAssign</h3>
+                        <p class="text-gray-700 leading-relaxed text-base">
+                            <strong>EzAssign</strong> is a premier academic support and structural guidance ecosystem created specifically for international students transitioning into British higher education institutions. Operating legally as <strong>EZASSIGN LLP</strong> (Incorporated in Jaipur, Rajasthan, India), EzAssign acts as an indispensable partner for students adapting to rigorous UK academic frameworks.
+                        </p>
+                        <p class="text-gray-700 leading-relaxed text-base">
+                            Moving abroad presents profound academic culture shifts—ranging from unfamiliar Harvard/APA referencing standards to critical analysis requirements and strict marking rubrics. EzAssign bridges this gap by offering step-by-step academic mentorship, structural essay blueprints, and module-specific research coaching.
+                        </p>
+                        <div class="bg-amber-50/90 border-l-4 border-amber-500 p-5 rounded-r-2xl mt-4">
+                            <h4 class="font-bold text-amber-900 text-sm flex items-center">
+                                <i class="fa-solid fa-scale-balanced mr-2"></i> Ethical Academic Commitment
+                            </h4>
+                            <p class="text-xs text-amber-800 mt-1.5 leading-relaxed">
+                                EzAssign emphasizes genuine academic skill building over ghostwriting. Our guidance equips students with critical thinking frameworks, assignment outlines, and literature review structures to foster long-term scholastic autonomy.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="bg-white p-6 rounded-3xl border border-gray-200/90 shadow-sm space-y-4">
+                        <h4 class="font-bold text-gray-900 text-xs uppercase tracking-wider border-b pb-3 border-gray-100 flex items-center justify-between">
+                            <span>Key Facts at a Glance</span>
+                            <i class="fa-solid fa-circle-info text-brand-500"></i>
+                        </h4>
+                        <ul class="space-y-3.5 text-xs text-gray-600">
+                            <li class="flex justify-between items-center">
+                                <span class="font-medium text-gray-500">Legal Entity:</span>
+                                <span class="font-bold text-gray-900">EZASSIGN LLP</span>
+                            </li>
+                            <li class="flex justify-between items-center">
+                                <span class="font-medium text-gray-500">Headquarters:</span>
+                                <span class="font-bold text-gray-900">Jaipur, Rajasthan, IN</span>
+                            </li>
+                            <li class="flex justify-between items-center">
+                                <span class="font-medium text-gray-500">Primary Market:</span>
+                                <span class="font-bold text-gray-900">UK Universities</span>
+                            </li>
+                            <li class="flex justify-between items-center">
+                                <span class="font-medium text-gray-500">Students Assisted:</span>
+                                <span class="font-bold text-emerald-600">16,000+ Global Scholars</span>
+                            </li>
+                            <li class="flex justify-between items-center">
+                                <span class="font-medium text-gray-500">Official Portal:</span>
+                                <a href="https://ezassign.uk/" target="_blank" class="text-brand-500 underline font-bold">ezassign.uk</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- TAB 2: METHODOLOGY -->
+            <div id="profile-method" class="profile-tab-content hidden space-y-6">
+                <h3 class="text-2xl font-extrabold text-gray-900">Academic Blueprint Methodology</h3>
+                <p class="text-gray-700 leading-relaxed max-w-3xl">
+                    Our unique four-stage methodology ensures that students understand <em>how</em> to approach complex dissertations, reports, and coursework without feeling overwhelmed.
+                </p>
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 pt-4">
+                    <div class="bg-white p-6 rounded-2xl border border-gray-200 shadow-sm space-y-3 hover:border-brand-500 transition-colors">
+                        <div class="w-10 h-10 rounded-xl bg-brand-50 text-brand-500 font-extrabold flex items-center justify-center text-base">1</div>
+                        <h4 class="font-bold text-gray-900 text-sm">Rubric Deconstruction</h4>
+                        <p class="text-xs text-gray-600 leading-relaxed">Analyzing marking schemes, learning outcomes, and word count distribution for targeted focus.</p>
+                    </div>
+                    <div class="bg-white p-6 rounded-2xl border border-gray-200 shadow-sm space-y-3 hover:border-brand-500 transition-colors">
+                        <div class="w-10 h-10 rounded-xl bg-blue-50 text-blue-600 font-extrabold flex items-center justify-center text-base">2</div>
+                        <h4 class="font-bold text-gray-900 text-sm">Research Frameworks</h4>
+                        <p class="text-xs text-gray-600 leading-relaxed">Curating high-impact peer-reviewed journals, literature matrices, and citation structures.</p>
+                    </div>
+                    <div class="bg-white p-6 rounded-2xl border border-gray-200 shadow-sm space-y-3 hover:border-brand-500 transition-colors">
+                        <div class="w-10 h-10 rounded-xl bg-emerald-50 text-emerald-600 font-extrabold flex items-center justify-center text-base">3</div>
+                        <h4 class="font-bold text-gray-900 text-sm">Structural Blueprints</h4>
+                        <p class="text-xs text-gray-600 leading-relaxed">Providing customized section-by-section outlines, thesis statement formulation, and argument maps.</p>
+                    </div>
+                    <div class="bg-white p-6 rounded-2xl border border-gray-200 shadow-sm space-y-3 hover:border-brand-500 transition-colors">
+                        <div class="w-10 h-10 rounded-xl bg-purple-50 text-purple-600 font-extrabold flex items-center justify-center text-base">4</div>
+                        <h4 class="font-bold text-gray-900 text-sm">1:1 Mentorship</h4>
+                        <p class="text-xs text-gray-600 leading-relaxed">Direct support line via WhatsApp and consultation to refine structure and formatting before submission.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- TAB 3: GLOBAL IMPACT -->
+            <div id="profile-impact" class="profile-tab-content hidden space-y-6">
+                <h3 class="text-2xl font-extrabold text-gray-900">Student Success & Impact Metrics</h3>
+                <div class="grid grid-cols-1 sm:grid-cols-3 gap-6 text-center">
+                    <div class="bg-white p-8 rounded-3xl border border-gray-200 shadow-sm">
+                        <div class="text-4xl sm:text-5xl font-black text-gray-900 tracking-tight">16,000+</div>
+                        <div class="text-xs font-bold text-brand-500 uppercase tracking-widest mt-3">Students Supported</div>
+                    </div>
+                    <div class="bg-white p-8 rounded-3xl border border-gray-200 shadow-sm">
+                        <div class="text-4xl sm:text-5xl font-black text-gray-900 tracking-tight">98.4%</div>
+                        <div class="text-xs font-bold text-brand-500 uppercase tracking-widest mt-3">On-Time Completion</div>
+                    </div>
+                    <div class="bg-white p-8 rounded-3xl border border-gray-200 shadow-sm">
+                        <div class="text-4xl sm:text-5xl font-black text-gray-900 tracking-tight">45+</div>
+                        <div class="text-xs font-bold text-brand-500 uppercase tracking-widest mt-3">UK Universities Covered</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- TAB 4: CONTACT -->
+            <div id="profile-contact" class="profile-tab-content hidden space-y-6">
+                <h3 class="text-2xl font-extrabold text-gray-900">Institutional & Student Touchpoints</h3>
+                <div class="bg-white p-8 rounded-3xl border border-gray-200 shadow-sm space-y-6 max-w-xl">
+                    <div class="flex items-center space-x-4">
+                        <div class="w-12 h-12 rounded-2xl bg-brand-50 text-brand-500 flex items-center justify-center text-lg shrink-0">
+                            <i class="fa-solid fa-envelope"></i>
+                        </div>
+                        <div>
+                            <div class="text-xs text-gray-500 font-semibold uppercase tracking-wider">Official Email Support</div>
+                            <a href="mailto:EzAssignglobal@gmail.com" class="text-base font-bold text-gray-900 hover:text-brand-500 transition-colors">EzAssignglobal@gmail.com</a>
+                        </div>
+                    </div>
+                    <div class="flex items-center space-x-4">
+                        <div class="w-12 h-12 rounded-2xl bg-emerald-50 text-emerald-600 flex items-center justify-center text-lg shrink-0">
+                            <i class="fa-solid fa-phone"></i>
+                        </div>
+                        <div>
+                            <div class="text-xs text-gray-500 font-semibold uppercase tracking-wider">Helpline / WhatsApp</div>
+                            <div class="text-base font-bold text-gray-900">+91-87428 18004 / +91-92564 66594</div>
+                        </div>
+                    </div>
+                    <div class="flex items-center space-x-4">
+                        <div class="w-12 h-12 rounded-2xl bg-blue-50 text-blue-600 flex items-center justify-center text-lg shrink-0">
+                            <i class="fa-solid fa-globe"></i>
+                        </div>
+                        <div>
+                            <div class="text-xs text-gray-500 font-semibold uppercase tracking-wider">Official Portal</div>
+                            <a href="https://ezassign.uk/" target="_blank" class="text-base font-bold text-brand-500 underline">https://ezassign.uk/</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 3: LATEST NEWS STREAM -->
+        <section id="section-news" class="hidden space-y-8">
+            <div class="border-b border-gray-200 pb-6">
+                <span class="text-xs font-bold uppercase tracking-widest text-brand-500 flex items-center space-x-2">
+                    <i class="fa-solid fa-newspaper"></i>
+                    <span>Press Releases & Top Stories</span>
+                </span>
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-gray-900 mt-2">Latest Editorial Updates & Academic News</h2>
+                <p class="text-gray-600 text-sm mt-1">Stay informed with our breaking press publications, academic updates, and higher education sector analyses.</p>
+            </div>
+            <div id="news-stream-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Dynamically populated via JS -->
+            </div>
+        </section>
+
+        <!-- SECTION 4: PR & SUBMISSIONS -->
+        <section id="section-pr" class="hidden space-y-12">
+
+            <!-- PR HERO -->
+            <div class="text-center max-w-3xl mx-auto space-y-4">
+                <span class="inline-flex items-center space-x-2 px-3 py-1 bg-red-50 text-red-500 border border-red-100 text-xs font-bold rounded-full uppercase tracking-wider">
+                    <span>Media & Partnerships</span>
+                </span>
+                <h2 class="text-3xl sm:text-5xl font-extrabold tracking-tight text-gray-900 leading-tight">
+                    Publish Your News, PR & Brand Insights with EzAssign Media
+                </h2>
+                <p class="text-gray-600 text-base sm:text-lg">
+                    Amplify your brand, thought leadership, educational services, or corporate news across our high-authority academic and business audience.
+                </p>
+            </div>
+
+            <!-- 10 KEY BENEFITS CONTAINER -->
+            <div class="bg-white p-8 sm:p-12 rounded-3xl border border-gray-200/90 shadow-sm space-y-8">
+                <h3 class="text-xl font-extrabold text-gray-900 flex items-center space-x-2">
+                    <i class="fa-solid fa-award text-brand-500"></i>
+                    <span>10 Key Benefits of Publishing PR with EzAssign Media</span>
+                </h3>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6 text-sm">
+                    <div class="flex items-start space-x-4">
+                        <span class="w-8 h-8 rounded-full bg-red-500 text-white font-bold flex items-center justify-center shrink-0 text-xs">1</span>
+                        <div>
+                            <h4 class="font-bold text-gray-900">Direct Access to 16,000+ Global Students</h4>
+                            <p class="text-gray-600 text-xs mt-1">Reach ambitious UK international students, researchers, and university scholars.</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start space-x-4">
+                        <span class="w-8 h-8 rounded-full bg-red-500 text-white font-bold flex items-center justify-center shrink-0 text-xs">2</span>
+                        <div>
+                            <h4 class="font-bold text-gray-900">High-Domain Authority SEO Backlinks</h4>
+                            <p class="text-gray-600 text-xs mt-1">Boost your organic search rankings with contextual, do-follow editorial references.</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start space-x-4">
+                        <span class="w-8 h-8 rounded-full bg-red-500 text-white font-bold flex items-center justify-center shrink-0 text-xs">3</span>
+                        <div>
+                            <h4 class="font-bold text-gray-900">Targeted Business & EdTech Audience</h4>
+                            <p class="text-gray-600 text-xs mt-1">Connect directly with decision-makers in education technology and corporate business.</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start space-x-4">
+                        <span class="w-8 h-8 rounded-full bg-red-500 text-white font-bold flex items-center justify-center shrink-0 text-xs">4</span>
+                        <div>
+                            <h4 class="font-bold text-gray-900">Multi-Channel Social Amplification</h4>
+                            <p class="text-gray-600 text-xs mt-1">Features across EzAssign Instagram (1.2k+ followers) and active LinkedIn networks.</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start space-x-4">
+                        <span class="w-8 h-8 rounded-full bg-red-500 text-white font-bold flex items-center justify-center shrink-0 text-xs">5</span>
+                        <div>
+                            <h4 class="font-bold text-gray-900">Rapid Editorial Turnaround</h4>
+                            <p class="text-gray-600 text-xs mt-1">Fast-track review processes ensure your news is published within 24–48 business hours.</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start space-x-4">
+                        <span class="w-8 h-8 rounded-full bg-red-500 text-white font-bold flex items-center justify-center shrink-0 text-xs">6</span>
+                        <div>
+                            <h4 class="font-bold text-gray-900">Permanent Article Archiving</h4>
+                            <p class="text-gray-600 text-xs mt-1">Your press releases remain indexed indefinitely for continuous search visibility.</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start space-x-4">
+                        <span class="w-8 h-8 rounded-full bg-red-500 text-white font-bold flex items-center justify-center shrink-0 text-xs">7</span>
+                        <div>
+                            <h4 class="font-bold text-gray-900">Thought Leadership Positioning</h4>
+                            <p class="text-gray-600 text-xs mt-1">Establish founder authority alongside leading higher education experts.</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start space-x-4">
+                        <span class="w-8 h-8 rounded-full bg-red-500 text-white font-bold flex items-center justify-center shrink-0 text-xs">8</span>
+                        <div>
+                            <h4 class="font-bold text-gray-900">Institutional Credibility</h4>
+                            <p class="text-gray-600 text-xs mt-1">Align with an established academic support service trusted across top universities.</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start space-x-4">
+                        <span class="w-8 h-8 rounded-full bg-red-500 text-white font-bold flex items-center justify-center shrink-0 text-xs">9</span>
+                        <div>
+                            <h4 class="font-bold text-gray-900">Content Co-Creation & Formatting</h4>
+                            <p class="text-gray-600 text-xs mt-1">Our editorial team assists in tailoring your press release for maximum reader engagement.</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start space-x-4">
+                        <span class="w-8 h-8 rounded-full bg-red-500 text-white font-bold flex items-center justify-center shrink-0 text-xs">10</span>
+                        <div>
+                            <h4 class="font-bold text-gray-900">Measurable Engagement Analytics</h4>
+                            <p class="text-gray-600 text-xs mt-1">Receive reader interaction metrics and click distribution reports for your feature.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- PR SUBMISSION FORM -->
+            <div class="max-w-3xl mx-auto bg-white p-8 sm:p-10 rounded-3xl border border-gray-200/90 shadow-lg space-y-6">
+                <div>
+                    <h3 class="text-2xl font-extrabold text-gray-900">Submit Your PR / Media Article Request</h3>
+                    <p class="text-xs text-gray-500 mt-1">Fill in your press details below. Clicking <strong>Subscribe & Send PR</strong> will prepare your official submission directed to <strong>EzAssignglobal@gmail.com</strong>.</p>
+                </div>
+
+                <form onsubmit="handlePRSubmit(event)" class="space-y-4">
+                    <div>
+                        <label class="block text-xs font-bold text-gray-700 uppercase tracking-wider mb-2">FULL NAME / REPRESENTATIVE NAME *</label>
+                        <input type="text" id="pr-name" required placeholder="e.g. Dr. Sarah Jenkins" class="w-full px-4 py-3 rounded-xl border border-gray-200 text-sm focus:outline-none focus:border-brand-500 focus:ring-1 focus:ring-brand-500">
+                    </div>
+
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                        <div>
+                            <label class="block text-xs font-bold text-gray-700 uppercase tracking-wider mb-2">EMAIL ADDRESS *</label>
+                            <input type="email" id="pr-email" required placeholder="name@company.com" class="w-full px-4 py-3 rounded-xl border border-gray-200 text-sm focus:outline-none focus:border-brand-500 focus:ring-1 focus:ring-brand-500">
+                        </div>
+                        <div>
+                            <label class="block text-xs font-bold text-gray-700 uppercase tracking-wider mb-2">PHONE / WHATSAPP NUMBER *</label>
+                            <input type="text" id="pr-phone" required placeholder="+91-8742818004" class="w-full px-4 py-3 rounded-xl border border-gray-200 text-sm focus:outline-none focus:border-brand-500 focus:ring-1 focus:ring-brand-500">
+                        </div>
+                    </div>
+
+                    <div>
+                        <label class="block text-xs font-bold text-gray-700 uppercase tracking-wider mb-2">ARTICLE TITLE / PRESS TOPIC *</label>
+                        <input type="text" id="pr-title" required placeholder="e.g. Innovative Approaches in UK Business Education" class="w-full px-4 py-3 rounded-xl border border-gray-200 text-sm focus:outline-none focus:border-brand-500 focus:ring-1 focus:ring-brand-500">
+                    </div>
+
+                    <div>
+                        <label class="block text-xs font-bold text-gray-700 uppercase tracking-wider mb-2">ARTICLE PITCH / PRESS CONTENT OVERVIEW *</label>
+                        <textarea id="pr-pitch" required rows="4" placeholder="Provide a short synopsis of the article or news release you wish to publish..." class="w-full px-4 py-3 rounded-xl border border-gray-200 text-sm focus:outline-none focus:border-brand-500 focus:ring-1 focus:ring-brand-500"></textarea>
+                    </div>
+
+                    <button type="submit" class="w-full py-4 bg-black hover:bg-brand-500 text-white font-bold rounded-xl text-sm shadow-md transition-all flex items-center justify-center space-x-2">
+                        <i class="fa-solid fa-paper-plane text-xs"></i>
+                        <span>Subscribe & Send PR Request</span>
+                    </button>
+                </form>
+
+                <div class="pt-4 border-t border-gray-100 flex flex-wrap items-center justify-between text-xs text-gray-500 gap-2">
+                    <div><i class="fa-solid fa-envelope mr-1"></i> Direct Email: <strong class="text-gray-800">EzAssignglobal@gmail.com</strong></div>
+                    <div><i class="fa-solid fa-phone mr-1"></i> Helpline: <strong class="text-gray-800">+91-87428 18004</strong></div>
+                </div>
+            </div>
+
+        </section>
+
+    </main>
+
+    <!-- NEWSLETTER SUBSCRIPTION BAR -->
+    <section class="bg-white border-t border-b border-gray-200/80 py-10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center justify-between gap-6">
+            <div>
+                <h3 class="text-xl font-extrabold text-gray-900">Subscribe to the weekly editorial edit</h3>
+                <p class="text-xs text-gray-500 mt-1">Curated higher education trends, business case studies, and academic updates. Unsubscribe at any time.</p>
+            </div>
+            <form onsubmit="handleNewsletterSubmit(event)" class="flex w-full md:w-auto space-x-2">
+                <input type="email" required placeholder="Your email address" class="px-5 py-3 rounded-full border border-gray-200 text-xs focus:outline-none focus:border-brand-500 w-full sm:w-80">
+                <button type="submit" class="w-11 h-11 rounded-full bg-gray-900 hover:bg-brand-500 text-white flex items-center justify-center shrink-0 transition-colors">
+                    <i class="fa-solid fa-arrow-right text-xs"></i>
+                </button>
+            </form>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-white text-gray-600 text-xs py-12 border-t border-gray-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 md:grid-cols-4 gap-8">
+            
+            <div class="space-y-3 md:col-span-1">
+                <div class="text-lg font-black text-brand-500">EzAssign Media</div>
+                <p class="text-gray-500 leading-relaxed">
+                    A curated showcase of higher education intelligence, business strategy, and student academic success in the UK.
+                </p>
+            </div>
+
+            <div>
+                <h4 class="font-bold text-gray-900 uppercase tracking-wider mb-3">NAVIGATION</h4>
+                <ul class="space-y-2">
+                    <li><a href="https://ezassign.uk/" target="_blank" class="hover:text-brand-500">EzAssign Official Website</a></li>
+                    <li><button onclick="showSection('profiles')" class="hover:text-brand-500 text-left">Corporate Profiles</button></li>
+                    <li><button onclick="showSection('news')" class="hover:text-brand-500 text-left">Latest News & Press</button></li>
+                    <li><button onclick="showSection('pr')" class="hover:text-brand-500 text-left">PR & Media Submissions</button></li>
+                </ul>
+            </div>
+
+            <div>
+                <h4 class="font-bold text-gray-900 uppercase tracking-wider mb-3">CONTACT & SUPPORT</h4>
+                <ul class="space-y-2">
+                    <li><strong>Helpline:</strong> +91-87428 18004</li>
+                    <li><strong>WhatsApp:</strong> +91-92564 66594</li>
+                    <li><strong>Email:</strong> EzAssignglobal@gmail.com</li>
+                    <li><strong>HQ:</strong> Jaipur, Rajasthan, India</li>
+                </ul>
+            </div>
+
+            <div>
+                <h4 class="font-bold text-gray-900 uppercase tracking-wider mb-3">SOCIAL & ADMIN</h4>
+                <ul class="space-y-2">
+                    <li><a href="https://www.instagram.com/ezassign" target="_blank" class="hover:text-brand-500"><i class="fa-brands fa-instagram mr-1.5"></i> Instagram (1.2K+ Followers)</a></li>
+                    <li><a href="https://www.linkedin.com/company/ezassign" target="_blank" class="hover:text-brand-500"><i class="fa-brands fa-linkedin mr-1.5"></i> LinkedIn Community</a></li>
+                    <li><button onclick="openAdminModal()" class="hover:text-brand-500 text-left underline font-semibold mt-2">Admin Portal Login</button></li>
+                </ul>
+            </div>
+
+        </div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-12 pt-6 border-t border-gray-100 flex flex-col sm:flex-row items-center justify-between text-gray-400 gap-4">
+            <div>
+                &copy; 2026 EZASSIGN LLP. All rights reserved. Operating for international student academic excellence.
+            </div>
+            <div class="space-x-4">
+                <a href="#" class="hover:underline">Privacy Policy</a>
+                <a href="#" class="hover:underline">Terms of Service</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JAVASCRIPT ARTICLES DATA & LOGIC -->
+    <script>
+        // Exact articles database from user screenshots
+        const articles = [
+            {
+                id: 1,
+                title: "Adapting to UK University Assessment Frameworks: A Guide for International Students",
+                category: "Higher Education",
+                date: "October 28, 2026",
+                readTime: "6 min read",
+                author: "EzAssign Academic Board",
+                excerpt: "Deconstructing British university marking rubrics, critical evaluation expectations, and academic writing standards...",
+                image: "https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&w=800&q=80",
+                fullContent: `
+                    <p class="text-base text-gray-700 leading-relaxed mb-4">Entering the British higher education ecosystem presents international students with a unique set of academic requirements. Unlike systems heavily dependent on memorization, UK universities emphasize critical synthesis, independent research, and stringent referencing compliance.</p>
+                    <h3 class="text-lg font-bold text-gray-900 mt-6 mb-2">Key Assessment Criteria in the UK</h3>
+                    <ul class="list-disc pl-5 text-sm text-gray-600 space-y-2 mb-4">
+                        <li><strong>Critical Evaluation:</strong> Moving beyond description into questioning assumptions and analyzing methodology.</li>
+                        <li><strong>Harvard & APA Referencing:</strong> Proper citation hygiene to maintain high academic integrity.</li>
+                        <li><strong>Rubric Alignment:</strong> Structuring assignments directly against learning outcome matrices.</li>
+                    </ul>
+                    <p class="text-base text-gray-700 leading-relaxed">EzAssign offers personalized structural blueprints to help students successfully navigate these standards from day one.</p>
+                `
+            },
+            {
+                id: 2,
+                title: "Building Practical Software & Business Models in EdTech: Lessons from NodeDR",
+                category: "PR & Business",
+                date: "October 25, 2026",
+                readTime: "8 min read",
+                author: "EzAssign Business Review",
+                excerpt: "An exclusive feature on how young entrepreneurs are bridging technology and real-world solutions across...",
+                image: "https://images.unsplash.com/photo-1531403009284-440f080d1e12?auto=format&fit=crop&w=800&q=80",
+                fullContent: `
+                    <p class="text-base text-gray-700 leading-relaxed mb-4">Educational Technology (EdTech) continues to evolve rapidly. The emergence of specialized platforms like NodeDR demonstrates how user-centric engineering can transform student productivity and resource allocation.</p>
+                    <h3 class="text-lg font-bold text-gray-900 mt-6 mb-2">Core Takeaways for EdTech Founders</h3>
+                    <p class="text-sm text-gray-600 leading-relaxed mb-4">Developing scalable EdTech requires a balance between seamless UX, algorithmic optimization, and deeply understanding student pain points during tight academic deadlines.</p>
+                `
+            },
+            {
+                id: 3,
+                title: "Mastering Dissertation Structures: Research Methodology & Literature Reviews",
+                category: "UK Academics",
+                date: "October 21, 2026",
+                readTime: "10 min read",
+                author: "Dr. Alistair Vance",
+                excerpt: "Step-by-step structural strategies to construct high-scoring Master's dissertations in business, healthcare, an...",
+                image: "https://images.unsplash.com/photo-1455390582262-044cdead277a?auto=format&fit=crop&w=800&q=80",
+                fullContent: `
+                    <p class="text-base text-gray-700 leading-relaxed mb-4">A Master's dissertation is often the pinnacle of postgraduate study in the UK. Mastering literature matrices and research methodology is crucial to earning Distinction marks.</p>
+                    <p class="text-sm text-gray-600 leading-relaxed mb-4">This guide outlines qualitative vs. quantitative frameworks, sample sizing, thematic analysis, and ethical clearance guidelines.</p>
+                `
+            },
+            {
+                id: 4,
+                title: "The Evolution of Overseas Student Support Services: 2026 Industry Report",
+                category: "EdTech",
+                date: "October 18, 2026",
+                readTime: "5 min read",
+                author: "EzAssign Research",
+                excerpt: "How academic mentorship services have transitioned from transactional assistance to holistic learning frameworks.",
+                image: "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=800&q=80",
+                fullContent: `
+                    <p class="text-base text-gray-700 leading-relaxed mb-4">International student support has evolved from simple proofreading into comprehensive academic skill building. Modern scholars seek mentorship that respects academic integrity while providing structural guidance.</p>
+                `
+            },
+            {
+                id: 5,
+                title: "Effective Time Management Strategies for Working International Students",
+                category: "Student Strategy",
+                date: "October 14, 2026",
+                readTime: "4 min read",
+                author: "Priya Sharma",
+                excerpt: "Balancing part-time jobs, university deadlines, and personal well-being during academic semesters.",
+                image: "https://images.unsplash.com/photo-1506784983877-45594efa4cbe?auto=format&fit=crop&w=800&q=80",
+                fullContent: `
+                    <p class="text-base text-gray-700 leading-relaxed mb-4">Balancing 20-hour work limitations with intense coursework requires rigorous time blocking, prioritization techniques, and proactive communication with university tutors.</p>
+                `
+            },
+            {
+                id: 6,
+                title: "Career Progression Post-Graduation: Transitioning from UK Degrees to Global Roles",
+                category: "Career Guidance",
+                date: "October 10, 2026",
+                readTime: "7 min read",
+                author: "EzAssign Career Advisory",
+                excerpt: "Leveraging academic distinctions and research projects during corporate job interviews and visa transitions.",
+                image: "https://images.unsplash.com/photo-1507679799987-c73779587ccf?auto=format&fit=crop&w=800&q=80",
+                fullContent: `
+                    <p class="text-base text-gray-700 leading-relaxed mb-4">Converting a UK degree into global employment requires strategically presenting academic research projects, dissertation findings, and soft skills to prospective corporate employers.</p>
+                `
+            }
+        ];
+
+        // Render Article Card HTML
+        function createArticleCard(art) {
+            return `
+                <div onclick="openArticleModal(${art.id})" class="card-container bg-white rounded-3xl border border-gray-200/90 overflow-hidden shadow-sm hover:shadow-card-hover transition-all duration-300 cursor-pointer flex flex-col justify-between">
+                    <div>
+                        <div class="relative h-48 overflow-hidden bg-gray-100">
+                            <img src="${art.image}" alt="${art.title}" class="w-full h-full object-cover img-zoom">
+                            <span class="absolute top-4 left-4 bg-gray-900/90 backdrop-blur-md text-white text-[10px] font-bold px-3 py-1 rounded-full uppercase tracking-wider">
+                                ${art.category}
+                            </span>
+                        </div>
+                        <div class="p-6 space-y-3">
+                            <div class="text-[11px] text-gray-400 font-semibold space-x-2">
+                                <span>${art.date}</span>
+                                <span>•</span>
+                                <span>${art.readTime}</span>
+                            </div>
+                            <h3 class="text-lg font-bold text-gray-900 leading-snug hover:text-brand-500 transition-colors">
+                                ${art.title}
+                            </h3>
+                            <p class="text-xs text-gray-500 leading-relaxed">
+                                ${art.excerpt}
+                            </p>
+                        </div>
+                    </div>
+                    <div class="px-6 pb-6 pt-2 flex items-center justify-between border-t border-gray-50 text-xs font-bold text-gray-700">
+                        <span>${art.author}</span>
+                        <span class="text-brand-500 flex items-center space-x-1">
+                            <span>Read</span>
+                            <i class="fa-solid fa-arrow-right text-[10px]"></i>
+                        </span>
+                    </div>
+                </div>
+            `;
+        }
+
+        // Render Home & News grids
+        function renderArticles(items) {
+            const homeGrid = document.getElementById('articles-grid');
+            const newsGrid = document.getElementById('news-stream-grid');
+            
+            const htmlContent = items.map(createArticleCard).join('');
+            if (homeGrid) homeGrid.innerHTML = htmlContent;
+            if (newsGrid) newsGrid.innerHTML = htmlContent;
+        }
+
+        // Section navigation
+        function showSection(sec) {
+            ['home', 'profiles', 'news', 'pr'].forEach(s => {
+                const el = document.getElementById('section-' + s);
+                if (el) el.classList.add('hidden');
+            });
+            const activeEl = document.getElementById('section-' + sec);
+            if (activeEl) activeEl.classList.remove('hidden');
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        // Profile tabs switching
+        function switchProfileTab(tabId) {
+            document.querySelectorAll('.profile-tab-content').forEach(c => c.classList.add('hidden'));
+            document.querySelectorAll('.profile-tab-btn').forEach(b => {
+                b.classList.remove('bg-gray-900', 'text-white');
+                b.classList.add('bg-white', 'text-gray-700');
+            });
+            const activeTab = document.getElementById(tabId);
+            if (activeTab) activeTab.classList.remove('hidden');
+
+            const btnMap = {
+                'profile-corp': 'tab-btn-corp',
+                'profile-method': 'tab-btn-method',
+                'profile-impact': 'tab-btn-impact',
+                'profile-contact': 'tab-btn-contact'
+            };
+            const activeBtn = document.getElementById(btnMap[tabId]);
+            if (activeBtn) {
+                activeBtn.classList.add('bg-gray-900', 'text-white');
+                activeBtn.classList.remove('bg-white', 'text-gray-700');
+            }
+        }
+
+        // Category Filter
+        function filterCategory(cat) {
+            document.querySelectorAll('.category-pill').forEach(p => {
+                p.classList.remove('bg-gray-900', 'text-white', 'border-gray-900');
+                p.classList.add('bg-white', 'text-gray-700', 'border-gray-200');
+            });
+            const activeBtn = document.getElementById('filter-' + cat);
+            if (activeBtn) {
+                activeBtn.classList.add('bg-gray-900', 'text-white', 'border-gray-900');
+                activeBtn.classList.remove('bg-white', 'text-gray-700', 'border-gray-200');
+            }
+
+            if (cat === 'All') {
+                renderArticles(articles);
+            } else {
+                const filtered = articles.filter(a => a.category === cat);
+                renderArticles(filtered);
+            }
+        }
+
+        // Search Overlay
+        function toggleSearchModal() {
+            const modal = document.getElementById('search-modal');
+            modal.classList.toggle('hidden');
+            if (!modal.classList.contains('hidden')) {
+                document.getElementById('modal-search-input').focus();
+            }
+        }
+
+        function handleSearch(val) {
+            const resultsBox = document.getElementById('search-results');
+            if (!val.trim()) {
+                resultsBox.innerHTML = `<p class="text-xs text-gray-400 py-4 text-center">Type keyword to search published articles...</p>`;
+                return;
+            }
+            const query = val.toLowerCase();
+            const matched = articles.filter(a => 
+                a.title.toLowerCase().includes(query) || 
+                a.excerpt.toLowerCase().includes(query) ||
+                a.category.toLowerCase().includes(query)
+            );
+
+            if (matched.length === 0) {
+                resultsBox.innerHTML = `<p class="text-xs text-gray-500 py-4 text-center">No articles found matching "${val}"</p>`;
+            } else {
+                resultsBox.innerHTML = matched.map(a => `
+                    <div onclick="openArticleModal(${a.id}); toggleSearchModal()" class="py-3 cursor-pointer hover:bg-gray-50 px-2 rounded-xl transition-colors">
+                        <span class="text-[10px] font-bold text-brand-500 uppercase">${a.category}</span>
+                        <h4 class="text-sm font-bold text-gray-900">${a.title}</h4>
+                        <p class="text-xs text-gray-500 truncate">${a.excerpt}</p>
+                    </div>
+                `).join('');
+            }
+        }
+
+        // Modals
+        function openAdminModal() { document.getElementById('admin-modal').classList.remove('hidden'); }
+        function closeAdminModal() { document.getElementById('admin-modal').classList.add('hidden'); }
+        function toggleMobileMenu() { document.getElementById('mobile-menu').classList.toggle('hidden'); }
+
+        function openArticleModal(id) {
+            const art = articles.find(a => a.id === id);
+            if (!art) return;
+            const modalContent = document.getElementById('article-modal-content');
+            modalContent.innerHTML = `
+                <span class="inline-block bg-brand-50 text-brand-500 text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider mb-3">${art.category}</span>
+                <h2 class="text-2xl sm:text-3xl font-extrabold text-gray-900 leading-tight mb-3">${art.title}</h2>
+                <div class="flex items-center space-x-3 text-xs text-gray-400 pb-6 border-b border-gray-100 mb-6">
+                    <span>By <strong>${art.author}</strong></span>
+                    <span>•</span>
+                    <span>${art.date}</span>
+                    <span>•</span>
+                    <span>${art.readTime}</span>
+                </div>
+                <img src="${art.image}" class="w-full h-64 object-cover rounded-2xl mb-6">
+                <div>${art.fullContent}</div>
+            `;
+            document.getElementById('article-modal').classList.remove('hidden');
+        }
+
+        function closeArticleModal() {
+            document.getElementById('article-modal').classList.add('hidden');
+        }
+
+        // Form handlers
+        function handlePRSubmit(e) {
+            e.preventDefault();
+            alert('Thank you! Your PR request has been registered and routed to EzAssignglobal@gmail.com. Our editorial team will get in touch with you within 24 hours.');
+            e.target.reset();
+        }
+
+        function handleNewsletterSubmit(e) {
+            e.preventDefault();
+            alert('Subscribed successfully! You will receive weekly editorial edits.');
+            e.target.reset();
+        }
+
+        function handleAdminLogin(e) {
+            e.preventDefault();
+            alert('Admin credentials verified. Welcome to EzAssign Portal.');
+            closeAdminModal();
+        }
+
+        // Initial Load
+        window.onload = function() {
+            renderArticles(articles);
+        };
+    </script>
+</body>
+</html>
